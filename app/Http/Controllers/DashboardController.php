@@ -9,11 +9,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $response = file_get_contents('https://swapi.co/api/people/1');
+        $response = file_get_contents('https://swapi.co/api/people');
         
         $data = [
-            'nome' => 'Shayane',
-            'sobrenome' => 'Chaves',
             'response' =>  json_decode($response)
         ];
 

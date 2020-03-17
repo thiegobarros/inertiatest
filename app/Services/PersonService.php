@@ -8,10 +8,17 @@ class PersonService
 {
     public static function store($request)
     {
-        dd(Person::create($request));
-
         try {
             return Person::create($request);
+        } catch (\Throwable $th) {
+            return false;
+        }
+    }
+
+    public static function getAll()
+    {
+        try {
+            return Person::all();
         } catch (\Throwable $th) {
             return false;
         }

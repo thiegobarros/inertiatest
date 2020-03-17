@@ -22,5 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard.index');
+Route::get('/person', 'PersonController@index')->name('person');
 Route::get('/person/create', 'PersonController@create')->name('person.create');
 Route::post('/person/store', 'PersonController@store')->name('person.store');
+Route::get('/person/erro', 'PersonController@erro')->name('person.erro');
